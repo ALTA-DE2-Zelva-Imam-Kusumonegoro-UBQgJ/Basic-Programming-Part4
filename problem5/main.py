@@ -10,7 +10,6 @@ def mean_median(angka):
     else:
         median = sort_angka[len(angka)//2]
     
-    # Return a tuple containing mean and median
     return round(mean, 1), round(median, 1)
 
 
