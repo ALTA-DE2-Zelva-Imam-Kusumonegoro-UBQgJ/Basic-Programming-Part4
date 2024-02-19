@@ -1,7 +1,18 @@
-def mean_median(array_input):
-    mean = 1.0
-    median = 1
-    return (mean, median)
+def mean_median(angka):
+    if len(angka) == 0:
+        return None
+    
+    mean = sum(angka) / len(angka)
+    
+    sort_angka = sorted(angka)
+    if len(angka) % 2 == 0:
+        median = (sort_angka[int(len(angka)*0.5 - 1)] + sort_angka[int(len(angka)*0.5)]) / 2
+    else:
+        median = sort_angka[len(angka)//2]
+    
+    # Return a tuple containing mean and median
+    return round(mean, 1), round(median, 1)
+
 
 if __name__ == '__main__':
     print(mean_median([1, 2, 3, 4])) # (2.5, 2.5)
